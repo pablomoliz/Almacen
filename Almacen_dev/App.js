@@ -1,42 +1,19 @@
-import { StatusBar } from "expo-status-bar";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Button,
-  TouchableHighlight,
-  Image,
-} from "react-native";
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import LoginScreen from "./screens/LoginScreen";
+import "react-native-gesture-handler";
+import ProductosScreen from "./screens/ProductosScree";
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Almacen golfo!</Text>
-      <Image
-        source={{ uri: "https://reactnative.dev/docs/assets/p_cat2.png" }}
-        style={styles.imagen}
-      />
-      <Button title="Press me" onPress={() => alert("Button pressed")} />
-      <TouchableHighlight onPress={() => alert("TouchableHighlight pressed")}>
-        <Text>TouchableHighlight</Text>
-      </TouchableHighlight>
-      <StatusBar style="auto" />
-      <Text>Open up App.js to start working on your app!</Text>
-      <Image source={require("./assets/icon.png")} style={styles.imagen} />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Productos" component={ProductosScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
-  imagen: {
-    width: 200,
-    height: 200,
-  },
-});
