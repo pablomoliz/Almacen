@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1007441172226",
+    "project_id": "mi-almacen-5ebcf",
+    "storage_bucket": "mi-almacen-5ebcf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007441172226:android:913ce0f0009bc3e3cad41b",
+        "android_client_info": {
+          "package_name": "host.exp.exponent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHWG6wjK_1iXP1UYcK2rKVm08jYdqS2mw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
